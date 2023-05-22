@@ -1,0 +1,50 @@
+# 描述项目基础信息
+info:
+  app:
+    name: admin-server-Web
+    port: 8000
+    version: 1.0.0
+    author: cicada
+
+server:
+  servlet:
+    application-display-name: admin-server-Web
+    context-path: /admin
+
+# 开放健康检查接口
+management:
+  server:
+    port: 8000 #可以自定义端口
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+spring:
+  application:
+    name: monitor-server
+
+  webflux:
+    base-path: /admin
+
+  mail:
+    host: smtp.163.com
+    username: xxxxx@163.com
+    password: your POP password
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+            
+  boot:
+    admin:
+      notify:
+        mail:
+          from: xxxxx@163.com
+          to: xxxxxxx@xxxxx

@@ -1,0 +1,13 @@
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.example.demo.config.HelloWorldAutoConfiguration
+
+# Initializers
+org.springframework.context.ApplicationContextInitializer=\
+com.example.demo.initializer.HelloApplicationContextInitializer,\
+com.example.demo.initializer.AfterHelloApplicationContextInitializer
+
+# Application Listeners
+org.springframework.context.ApplicationListener=\
+com.example.demo.listener.ContextClosedEventListener,\
+com.example.demo.listener.AfterContextClosedEventListener

@@ -1,0 +1,38 @@
+info:
+  app:
+    name: "@project.name@"
+    description: "@project.description@"
+    version: "@project.version@"
+    spring-boot-version: "@project.parent.version@"
+
+server:
+  servlet:
+    application-display-name: ProjectTemplate-Web
+    context-path: /client
+
+management:
+  server:
+    port: 8082 #可以自定义端口
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  security:
+    enabled: false
+
+
+  
+spring:
+  application:
+    name: admin-client # 给client应用取个名字
+
+  boot:
+    admin:
+      client:
+        url: http://localhost:8000/admin
+      
+
+
+logging:
+  file:
+    name: admin-client.log  #配置生成日志文件名称
